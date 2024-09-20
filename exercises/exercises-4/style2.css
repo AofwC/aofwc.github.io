@@ -32,6 +32,9 @@ img {
 .text:hover {
   opacity: 1;
 }
-.images1:hover {
+.image-container {
+  overflow: hidden;
+}
+img:hover {
   transform: scale(1.2);
 }
