@@ -3,32 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="icon.png" />
+    <title>Image Slideshow with Selector</title>
   </head>
   <body>
-    <div class="heading">
-      <div class="navbar">
-        <nav>
-          <button><a href="index.html"><h3>Home</a></h3></button>
-        </nav>
-        <nav>
-          <button><h3><a href="link.html">About</a></h3></button>
-        </nav>
-        <nav>
-          <button><h3><a href="404.html">Info</a></h3></button>
-        </nav>
+    <div class="slideshow-container">
+      <div class="slides fade">
+        <img src="APC_0014.JPG" alt="Image 1" />
       </div>
+      <div class="slides fade">
+        <img src="F35B359A-4FB0-4577-9DF0-36E0D1AA42FD.JPEG" alt="Image 2" />
+      </div>
+      <div class="slides fade">
+        <img src="IMG_3807.png" alt="Image 3" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <div class="content">
-        <di class="card">
-            <div class="image"><img src="IMG_3807.png" alt=""></div>
-            <div class="item1">Water</div>
-            <div class="item2">Lorem ipsum dolor, sit amet consectetur adi
-                pisicing elit. Iste ipsam perspiciatis soluta pariatur voluptates vel a ab dolorem, id explicabo.</div>
-            <div class="item3"><button><a href="404.html">Learn more</a></button></div>
-        </div>
-      </div>
+
+    <div class="image-selector">
+      <input
+        type="radio"
+        name="image"
+        id="image1"
+        class="image-input"
+        checked
+      />
+      <label for="image1" class="image-thumb" onclick="currentSlide(1)">
+        <img src="F35B359A-4FB0-4577-9DF0-36E0D1AA42FD.JPEG" alt="Image 1" />
+      </label>
+
+      <input type="radio" name="image" id="image2" class="image-input" />
+      <label for="image2" class="image-thumb" onclick="currentSlide(2)">
+        <img src="APC_0014.JPG" alt="Image 2" />
+      </label>
+
+      <input type="radio" name="image" id="image3" class="image-input" />
+      <label for="image3" class="image-thumb" onclick="currentSlide(3)">
+        <img src="F35B359A-4FB0-4577-9DF0-36E0D1AA42FD.JPEG" alt="Image 3" />
+      </label>
+    </div>
+
+    <script src="java.java"></script>
   </body>
 </html>
