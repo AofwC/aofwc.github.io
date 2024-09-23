@@ -1,0 +1,154 @@
+body {
+  margin: 0px;
+}
+:root {
+  --clr-header: #020616;
+  --clr-sub: #444444;
+  --clr-bttn: #3764e5;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 10px;
+  max-height: 616px;
+  padding: 10px;
+  margin: 10px;
+  background-color: aqua;
+}
+.img-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.head-1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 5px;
+  grid-column: 2 / 4;
+  grid-row: 1;
+  font-size: 50px;
+  text-decoration: none;
+  color: var(--clr-header);
+}
+.content-1 {
+  grid-column: 2;
+  font-size: 25px;
+  grid-column: 2 / 4;
+  color: var(--clr-sub);
+}
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 10px;
+}
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 24px;
+  background: var(--clr-bttn);
+  box-shadow: 2px 2px 2px 1px rgb(#19485f 20%);
+  cursor: pointer;
+  font-size: 16px;
+}
+.card1 {
+  width: 500px;
+  background-color: #f0f8ff;
+  height: 610px;
+  display: grid;
+  grid-template-columns: 166px 166px 166px;
+  grid-template-rows: 400px 50px 100px 50px;
+}
+.card1-img {
+  grid-column: 1 / 4;
+  justify-self: center;
+  margin: 10px;
+}
+.card1-head {
+  grid-column: 2;
+  grid-template-rows: 2;
+  justify-self: center;
+}
+.card1-body {
+  justify-self: center;
+  grid-column: 1/4;
+  grid-row: 3;
+  margin: 10px;
+  text-align: center;
+}
+.card1-foot {
+  position: relative;
+  grid-column: 3;
+  grid-row: 4;
+  justify-self: flex-end;
+  align-self: flex-end;
+  cursor: pointer;
+  z-index: 2;
+}
+.card1-foot::before {
+  content: " ";
+  position: absolute;
+  width: 0%;
+  height: 50px;
+  border-radius: 24px;
+  background: #2e87b4;
+  bottom: 0;
+  left: 0;
+  opacity: 0%;
+  transition: 0.2s ease;
+  z-index: 1;
+}
+.card1-foot:hover::before {
+  width: 100%;
+  opacity: 50%;
+}
+.card2 {
+  width: 500px;
+  background-color: rgb(250, 212, 212);
+  height: 610px;
+  display: grid;
+  grid-template-columns: 166px 166px 166px;
+  grid-template-rows: 400px 50px 100px 50px;
+}
+.card2-img {
+  grid-column: 1 / 4;
+  justify-self: center;
+  margin: 10px;
+}
+.card2-head {
+  grid-column: 2;
+  grid-template-rows: 2;
+  justify-self: center;
+}
+.card2-body {
+  justify-self: center;
+  grid-column: 1/4;
+  grid-row: 3;
+  margin: 10px;
+  text-align: center;
+}
+.card3 {
+  width: 500px;
+  background-color: beige;
+  height: 610px;
+  display: grid;
+  grid-template-columns: 166px 166px 166px;
+  grid-template-rows: 400px 50px 100px 50px;
+}
+.card3-img {
+  grid-column: 1 / 4;
+  justify-self: center;
+  margin: 10px;
+}
+.card3-head {
+  grid-column: 2;
+  grid-template-rows: 2;
+  justify-self: center;
+}
+.card3-body {
+  justify-self: center;
+  grid-column: 1/4;
+  grid-row: 3;
+  margin: 10px;
+  text-align: center;
+}
