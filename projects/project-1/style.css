@@ -96,24 +96,13 @@ button {
   cursor: pointer;
   z-index: 2;
   text-decoration: none;
-}
-.card1-foot::before {
-  content: " ";
-  position: absolute;
-  width: 0%;
-  height: 50px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  background-color: #7096ff;
   border-radius: 24px;
-  background: #2e87b4;
-  bottom: 0;
-  left: 0;
-  opacity: 0%;
-  transition: 0.2s ease;
-  z-index: 1;
 }
-.card1-foot:hover::before {
-  width: 100%;
-  opacity: 50%;
-}
+
 .card1-foot:active {
   transform: translateY(4px);
   transition: 0.2s ease;
@@ -455,6 +444,7 @@ button {
   color: var(--clr-sub);
   color: var(--clr-sub);
 }
+
 .card-5 {
   display: block;
   width: 500px;
