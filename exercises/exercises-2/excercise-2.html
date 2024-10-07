@@ -1,48 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>excerise-2</title>
-<head>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=, initial-scale=1.0" />
+  <title>excerise-2</title>
+  <head>
     <style>
-        .box1{
-            background-color: red;
-            width: 250px;
-            height: 250px;
-            
-        }
-        .box2{
-            background-color: rgb(48, 255, 48);
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            left: 150px;
-            top: 150px;
-        }
-        .box3{
-            background-color: blue;
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            left: 250px;
-            top: 250px;
-        }
-        #borader {
-            position: relative;
-            width: 1000px;
-            height: 1000px;
-            border: 10px solid gray;
-            margin: 10px auto; 
-        }
+      .box1 {
+        background-color: red;
+        width: 250px;
+        height: 250px;
+      }
+      .box2 {
+        background-color: rgb(48, 255, 48);
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        left: 150px;
+        top: 150px;
+      }
+      .box3 {
+        background-color: blue;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        left: 250px;
+        top: 250px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      .head {
+        grid-column: 1 / 4;
+        align-self: center;
+        justify-self: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        color: aqua;
+        text-wrap: balance;
+        max-inline-size: 50ch;
+        position: relative;
+      }
+      #borader {
+        position: relative;
+        width: 1000px;
+        height: 1000px;
+        border: 10px solid gray;
+        margin: 10px auto;
+      }
+      .head::before {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 5px;
+        bottom: 0;
+        left: 0;
+        background: rgb(255, 0, 0);
+        transition: 0.2s ease;
+      }
+      .head:hover::before {
+        width: 100%;
+      }
 
+      @media (max-width: 800px) {
+        .box3 {
+          background-color: black;
+          transition: 0.2s ease;
+          width: 300px;
+        }
+        .head {
+          grid-column: 1/ 2;
+          color: wheat;
+          transition: 1s ease;
+          animation: textani 1s ease-in 1;
+          animation-fill-mode: forwards;
+
+          text-wrap: nowrap;
+          white-space: nowrap;
+        }
+      }
+      @media (min-width: 800px) {
+        .box3 {
+          transition: 1s ease;
+          width: 550px;
+          background: violet;
+        }
+      }
+      .head {
+        font-size: 24px;
+      }
+      @keyframes textani {
+        0% {
+          font-size: 25px;
+        }
+        100% {
+          font-size: 50px;
+        }
+      }
+      @keyframes textout {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-10);
+        }
+        100% {
+          transform: translateX(-25);
+        }
+      }
     </style>
-</head>
-<body>
-<div id="borader">
-    <div class="box1"></div>
-    <div class="box2"></div>
-    <div class="box3"></div>
-</div>
-    
-</body>
+  </head>
+  <body>
+    <div id="borader">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3">
+        <div class="head">Read me</div>
+      </div>
+    </div>
+  </body>
 </html>
