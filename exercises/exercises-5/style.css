@@ -1,61 +1,91 @@
-body {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.myHam {
-  display: none;
-  background-color: white;
-  right: 0em;
-  position: absolute;
+header {
+  background-color: black;
 }
-#navContainer {
-  height: 70px;
-  background-color: #ffb400;
-  overflow: hidden;
-}
-#mainList {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
-#mainList li {
-  text-decoration: none;
+li {
   list-style: none;
-  display: flex;
-
-  padding: 0 24px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.ImgCon {
+  margin: 10px;
   padding: 10px;
-  transition: 0.5s ease;
+  display: grid;
+  justify-content: center;
 }
-.nav:hover {
-  color: aqua;
+.txt {
+  grid-row: 2;
+  align-self: first baseline;
 }
-.ham {
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.nav-branding {
+  font-size: 2rem;
+}
+.nav-link {
+  transition: 0.7s ease;
+}
+.nav-link:hover {
+  color: blue;
+}
+.hamburger {
   display: none;
   cursor: pointer;
 }
-.span {
+.bar {
   display: block;
   width: 25px;
   height: 3px;
-  margin: 3px auto;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background-color: white;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
 }
-#mainList.active {
-  display: block;
-  grid-template-columns: 1;
-  transition: 0.5s ease-out;
-}
-@media (max-width: 768px) {
-  #mainList {
-    flex-direction: column;
-  }
-  #mainList {
-    display: none;
-  }
-  .myHam {
+@media (max-width: 764px) {
+  .hamburger {
     display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgb(8, 1, 1);
+    width: 100%;
+    text-align: center;
+    transition: 0.2s ease-in;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
   }
 }
