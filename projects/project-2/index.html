@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navwrap">
+      <nav class="navbar">
+        <a href="#" class="nav-branding"> DOTA2</a>
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">secondPage</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <header>
+        <img src="Parallex/pre1.jpg" class="la1" alt="" />
+        <img src="Parallex/Subject1.png" class="la2" alt="" />
+        <h1 class="title">How to Win Dota 2</h1>
+      </header>
+      <section>
+        <div class="spacer layer1">
+          <div class="txtwrap">
+            <h2 class="sectiontxt">How to Win Dota 2 as the Offlaner</h2>
+            <p class="txtcontent">
+              Some people might said that Dota 2 is hard game to play. In
+              reality Dota 2 is a really easy game to play, but people are over
+              complicated the game. But, after this steps guides your mindset
+              over this game will be change! <br />
+              <br />
+              With these steps we will go over the hero picking phrase, laning
+              phrase, and winning phrase.
+            </p>
+            <button class="homebtn">Enter</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+      document.querySelectorAll("nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>
