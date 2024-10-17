@@ -22,4 +22,5 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 const hiddenElements = document.querySelectorAll(".txtcontent");
+
 hiddenElements.forEach((el) => observer.observe(el));
