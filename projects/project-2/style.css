@@ -150,6 +150,9 @@ a {
   height: 100vh;
   z-index: 11;
   position: absolute;
+  -webkit-box-shadow: 0px -25px 41px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -25px 41px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -25px 41px 0px rgba(0, 0, 0, 0.75);
 }
 .layer1 {
   background-image: url(wave1.svg);
@@ -183,4 +186,14 @@ a {
   border-radius: 25px;
   cursor: pointer;
   font-size: 3rem;
+  -webkit-box-shadow: -20px 9px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -20px 9px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -20px 9px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.homebtn:hover {
+  scale: 1.1;
+}
+.homebtn:active {
+  scale: 0.9;
 }

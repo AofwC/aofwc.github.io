@@ -24,3 +24,11 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".txtcontent");
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+document.getElementById("circle").addEventListener("click", function () {
+  const steps = document.querySelectorAll(".steps");
+  steps.forEach((step) => {
+    step.classList.toggle("navopen");
+  });
+  circle.classList.toggle("white");
+});
