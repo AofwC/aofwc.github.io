@@ -14,6 +14,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 200px 1fr 1fr;
 }
+.PageHeader {
+  grid-column: span 3;
+  color: rgb(253, 233, 213);
+  justify-self: center;
+  align-self: center;
+  font-size: 4rem;
+  font-family: "Hanken Grotesk", sans-serif;
+}
 
 .pageimg {
   grid-column: span 3;
@@ -28,6 +36,7 @@
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 2em;
   padding: 10px;
+  text-align: center;
 }
 #circle {
   height: 6rem;
