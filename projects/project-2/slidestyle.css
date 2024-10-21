@@ -63,8 +63,8 @@
 }
 .steps {
   display: none;
-  padding: 2rem;
-  height: 5vh;
+  padding-top: 10px;
+  height: 150px;
   background-color: black;
   width: 100vw;
   grid-row: 4;
@@ -77,11 +77,18 @@
   justify-content: space-evenly;
   font-size: 3rem;
   align-content: center;
+  transition: ease 400ms;
 }
 
 .navopen {
   display: block;
+  transition: ease 400ms;
 }
 #circle.white {
   background: white;
+}
+.stepGuide:has(li:hover) li:not(:hover) {
+  transition: ease 400ms;
+  scale: 0.8;
+  opacity: 0.7;
 }
