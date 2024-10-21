@@ -30,5 +30,17 @@ document.getElementById("circle").addEventListener("click", function () {
   steps.forEach((step) => {
     step.classList.toggle("navopen");
   });
-  circle.classList.toggle("white");
+
+  // Add functionality to toggle hidden class for .cmenu elements
+  hidden();
+
+  // Example to toggle a class on the button itself
+  this.classList.toggle("white");
 });
+
+function hidden() {
+  const cmenu = document.querySelectorAll(".cmenu");
+  cmenu.forEach((cmenu) => {
+    cmenu.classList.toggle("hidden");
+  });
+}

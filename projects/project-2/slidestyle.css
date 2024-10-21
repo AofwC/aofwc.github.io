@@ -35,7 +35,7 @@
   position: fixed;
   z-index: 3;
   left: 50%;
-  bottom: 12rem;
+  bottom: -4rem;
   transform: translateX(-50%);
   background-color: black;
   border: none;
@@ -91,4 +91,28 @@
   transition: ease 400ms;
   scale: 0.8;
   opacity: 0.7;
+}
+
+.cmenu {
+  position: absolute;
+  color: white;
+  top: -30px;
+  right: 10px;
+  animation: spin 4s infinite ease;
+}
+.hidden {
+  visibility: hidden;
+}
+
+@keyframes spin {
+  0% {
+    color: white;
+  }
+
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
 }
