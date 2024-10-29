@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 200vh; /* Increased height for scrolling */
+}
+
+.scroll-container {
+  position: sticky; /* Fixed to the viewport for scrolling effect */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px; /* Optional: limit width */
+  height: 50px;
+  background: white;
+  border: 1px solid #ccc transparent;
+}
+
+.text {
+  transition: transform 0.5s ease, opacity 1s ease; /* Smooth transitions */
+  white-space: wrap;
+  opacity: 1;
+  text-align: center;
+}
+
+/* Optional spacer to allow for scrolling */
+.spacer {
+  height: 200vh;
+}
