@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  height: 200vh; /* Increased height for scrolling */
+  height: 500vh; /* Increased height for scrolling */
 }
 
 .scroll-container {
@@ -28,5 +28,5 @@ body {
 
 /* Optional spacer to allow for scrolling */
 .spacer {
-  height: 200vh;
+  height: 500vh;
 }
