@@ -15,12 +15,11 @@ a {
   box-sizing: border-box;
   width: 100%;
   position: static;
-  min-width: 70px;
 }
 
 .navbar {
   text-transform: uppercase;
-  min-width: 70px;
+
   min-height: 70px;
   display: flex;
   justify-content: space-between;
