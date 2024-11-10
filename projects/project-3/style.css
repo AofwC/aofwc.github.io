@@ -3,25 +3,35 @@
   padding: 0;
   font-family: "Hanken Grotesk", sans-serif;
 }
+:root {
+  --bttncolor: #ff6666;
+}
+body :not(section.vid) {
+  overflow-x: hidden;
+}
 .container {
   display: flex;
   justify-content: center;
   align-self: center;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
+  overflow-y: hidden;
 }
 
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 .box {
   justify-self: center;
+  overflow-y: hidden;
 }
 .num {
   justify-self: center;
   font-size: 4rem;
+  overflow-y: hidden;
 }
 .headertxt {
   text-align: center;
@@ -32,6 +42,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  overflow-y: hidden;
 }
 .learnhome {
   cursor: pointer;
@@ -43,7 +54,7 @@
 .buyhome {
   cursor: pointer;
   border: none;
-  background-color: #ff6666;
+  background-color: var(--bttncolor);
   border-radius: 12px;
   padding: 10px;
   font-size: 2rem;
@@ -89,20 +100,139 @@ h3 {
 }
 .foot {
   height: 100vh;
-  background-color: #915405;
-  margin-top: -10px;
+  background-image: url(footelement/hombgjpg.jpg);
+  background-size: cover;
+  background-position: center;
   position: relative;
-}
-.footcontainer {
-  height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  overflow-y: auto;
 }
-.asset8 {
+
+.characters {
+  grid-row: 1;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 100vw;
+  overflow-y: hidden;
+  display: table-column;
+  margin-top: 20px;
+}
+.charactercard {
+  width: 200px;
+  object-fit: cover;
+  position: relative;
+  overflow-y: hidden;
+}
+.characters :nth-child(1) {
+  transform: rotate(-30deg);
+  left: 90px;
+  transition: ease 0.5s;
+}
+.characters :nth-child(2) {
+  transform: rotate(10deg);
+  transition: ease 0.5s;
+}
+.characters :nth-child(3) {
+  left: -90px;
+  transition: ease 0.5s;
+}
+.characters :nth-child(1):hover,
+.characters :nth-child(2):hover,
+.characters :nth-child(3):hover {
+  transform: scale(1.1);
+}
+.characterheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  overflow-y: hidden;
+}
+.charactertxt {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  color: white;
+  overflow-y: hidden;
+}
+
+.characterbttn {
+  background-color: var(--bttncolor);
+  border: none;
+  border-radius: 12px;
+  height: 50px;
+  width: 150px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+.characterbttn:hover {
+  scale: 1.1;
+}
+.author {
+  grid-row: 2;
+  grid-column: 3;
+  position: absolute;
+  overflow-y: hidden;
+  display: table-column;
+}
+.authorimg {
+  width: 200px;
+  object-fit: cover;
+  position: relative;
+  overflow-y: hidden;
+  justify-self: center;
+  align-items: center;
+  left: 30%;
+}
+.authorheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  overflow-y: hidden;
+}
+.authortxt {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5rem;
+  color: white;
+  overflow-y: hidden;
+}
+.authorbttn {
+  background-color: var(--bttncolor);
+  border: none;
+  border-radius: 12px;
+  height: 50px;
+  width: 150px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+.authorbttn:hover {
+  scale: 1.1;
+}
+@media (max-width: 768px) {
+  .foot {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .characters {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .author {
+    grid-row: 3;
+    grid-column: 1;
+  }
 }

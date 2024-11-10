@@ -50,12 +50,9 @@ const scroll = () => {
 scroll();
 window.addEventListener("scroll", scroll);
 
-const svg = document.querySelector("svg.asset8");
-const path = document.querySelector("path");
-
-const squid = () => {
-  path.style.strokeDasharray = "60";
-};
-
-squid();
-window.addEventListener("scroll", squid);
+function learnmore() {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
+}

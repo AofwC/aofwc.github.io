@@ -1,0 +1,99 @@
+.Alice {
+  background-color: #a0e9f3;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  grid-template-rows: 200px 300;
+  overflow-y: hidden;
+}
+.aliceimg {
+  grid-row: span 2;
+  width: 90%;
+
+  object-fit: cover;
+  align-self: center;
+  margin-left: 20px;
+}
+.aliceheader {
+  margin: 20px;
+  font-size: 2em;
+  justify-self: bottom;
+  align-self: end;
+}
+.alicebody {
+  height: 100%;
+  margin: 20px;
+  font-size: 1.5em;
+  max-width: 60ch;
+  text-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .Alice {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .aliceimg {
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+  }
+  .aliceheader {
+    justify-self: center;
+    align-self: center;
+  }
+  .alicebody {
+    max-width: 80ch;
+  }
+}
+.queen {
+  background-color: #f3a0a0;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  grid-template-rows: 200px 300;
+  overflow: hidden;
+}
+.queenimg {
+  grid-column: 2;
+  grid-row: span 2;
+  width: 90%;
+  object-fit: cover;
+  align-self: center;
+  margin-left: 20px;
+}
+.queenheader {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 20px;
+  font-size: 2em;
+  justify-self: bottom;
+  align-self: end;
+}
+.queentxt {
+  height: 100%;
+  margin: 20px;
+  font-size: 1.5em;
+  max-width: 60ch;
+  text-wrap: wrap;
+  overflow-y: hidden;
+}
+@media (max-width: 800px) {
+  .queen {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .queenimg {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .queenheader {
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+  }
+  .queentxt {
+    grid-row: 3;
+    max-width: 80ch;
+  }
+}
