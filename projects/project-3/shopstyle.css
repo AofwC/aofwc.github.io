@@ -71,7 +71,7 @@
 .reviewcontent1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 150vh;
+  height: 200vh;
 
   position: relative;
   place-items: center;
@@ -83,16 +83,25 @@
   transform: translateY(-50%);
   justify-self: center;
   transition: ease 0.2s;
+  margin: 20px;
 }
 .review1txt {
   grid-column: 2;
   padding: 2rem;
   color: #333;
 }
-@media (max-width: 768px) {
+.reviewcontent2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 200vh;
+  position: relative;
+  place-items: center;
+}
+
+@media (max-width: 320px) {
   .reviewcontent1 {
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: 200vh;
   }
   .reviewhead1 {
     grid-column: 1;
@@ -101,5 +110,9 @@
   }
   .review1txt {
     grid-column: 1;
+  }
+  .reviewcontent2 {
+    grid-template-columns: 1fr;
+    height: 200vh;
   }
 }
