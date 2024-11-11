@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navstyle.css" />
     <link
@@ -17,9 +17,9 @@
         <a href="index.html" class="nav-branding">Alice in Wonderland</a>
 
         <ul class="nav-menu">
-          <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Character</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Author</a></li>
+          <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+          <li class="nav-item"><a href="character.html" class="nav-link">Character</a></li>
+          <li class="nav-item"><a href="author.html" class="nav-link">Author</a></li>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -36,7 +36,7 @@
             One of the best selling book with one of the greatest movie adaption
           </div>
           <div class="homebtn">
-            <button class="learnhome" type="button" onclick="learnmore">Learn more</button>
+            <button class="learnhome" type="button" onclick="learnmore()">Learn more</button>
             <input class="buyhome" type="button" value="Buy now" />
           </div>
         </div>
@@ -46,48 +46,22 @@
       <div class="holder">
         <video src="vidhome.mp4" autoplay muted loop playsinline></video>
       </div>
-      <div class="about">
-        <div>
-          <h3>
-            In "Alice in Wonderland," young Alice follows a white rabbit down a
-            rabbit hole and finds herself in a peculiar and enchanting world
-            called Wonderland.
-          </h3>
-        </div>
-        <div>
-          <h3>
-            Throughout her journey, she encounters a series of eccentric and
-            whimsical characters, such as the Cheshire Cat, the Mad Hatter, and
-            the Queen of Hearts. Alice navigates through a topsy-turvy realm
-            where logic is often turned upside down, and nothing is as it seems.
-          </h3>
-        </div>
-        <div>
-          <h3>
-            As she tries to make sense of this extraordinary world and find her
-            way back home, Alice embarks on a delightful and sometimes
-            bewildering adventure, filled with curious encounters and
-            thought-provoking riddles. Along the way, she learns valuable
-            lessons about identity, imagination, and the power of embracing
-            one's curiosity.
-          </h3>
-        </div>
-      </div>
+      
     </section>
     <div class="foot">
       <div class="characters">
-        <img class="charactercard" src="footelement/card1.svg" alt="">
-        <img class="charactercard" src="footelement/card2.svg" alt="">
-        <img class="charactercard" src="footelement/card3.svg" alt="">
+        <img class="charactercard" src="footelement/card1.svg" alt="card of character1">
+        <img class="charactercard" src="footelement/card2.svg" alt="card of character2">
+        <img class="charactercard" src="footelement/card3.svg" alt="card of character3">
         <div class="characterheader">Characters</div>
         <div class="charactertxt">Explores some of the most iconic characters. </div>
         <input class="characterbttn" type="button" value="Learn Mome"  onclick="window.location.href='character.html'">
       </div>
       <div class="author">
-        <img class="authorimg" src="footelement/author.webp" alt="">
+        <img class="authorimg" src="footelement/author.webp" alt="Lewis Carroll portraits">
         <div class="authorheader">Author</div>
         <div class="authortxt">Learn more about Lewis Carroll life</div>
-        <input class="authorbttn" type="button" value="Learn More">
+        <input class="authorbttn" type="button" value="Learn More" onclick="window.location.href='author.html'">
         </div>
       </div>
     </div>

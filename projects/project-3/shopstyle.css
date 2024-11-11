@@ -1,0 +1,105 @@
+.bookcovercontainer {
+  display: grid;
+  gird-row-template: 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.bookcover {
+  grid-row: 1;
+  margin-top: 20px;
+}
+.bookbuybttn {
+  grid-row: 2;
+  justify-self: center;
+  cursor: pointer;
+  border: none;
+  background-color: #ff6666;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 2rem;
+  transition: 0.2s ease;
+}
+.bookbuybttn:hover {
+  scale: 1.1;
+}
+.bookinfo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  grid-template-columns: 1fr;
+  grid-row-template: 200px 100px 50px 400px;
+}
+.booktitle {
+  font-size: 2rem;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+}
+.bookauthor {
+  font-size: 1.5rem;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+}
+.bookprice {
+  font-size: 1.5rem;
+  align-self: center;
+  justify-self: center;
+}
+.bookdescription {
+  max-width: 75ch;
+  font-size: 1.5rem;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  margin: 20px;
+  margin-top: -2px;
+}
+.reviewcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.reviewcontent1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 150vh;
+
+  position: relative;
+  place-items: center;
+}
+.reviewhead1 {
+  grid-column: 1;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  justify-self: center;
+  transition: ease 0.2s;
+}
+.review1txt {
+  grid-column: 2;
+  padding: 2rem;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .reviewcontent1 {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+  .reviewhead1 {
+    grid-column: 1;
+    position: static;
+    transform: translateY(0);
+  }
+  .review1txt {
+    grid-column: 1;
+  }
+}

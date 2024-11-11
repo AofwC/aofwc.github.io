@@ -72,7 +72,7 @@ section.vid video {
   object-fit: cover;
 }
 section.vid {
-  height: 300vh;
+  height: 400vh;
   position: relative;
 }
 section.vid div.holder {
@@ -118,7 +118,7 @@ h3 {
   margin-top: 20px;
 }
 .charactercard {
-  width: 200px;
+  width: 20vw;
   object-fit: cover;
   position: relative;
   overflow-y: hidden;
@@ -156,6 +156,7 @@ h3 {
   font-size: 1.5rem;
   color: white;
   overflow-y: hidden;
+  text-align: center;
 }
 
 .characterbttn {
@@ -205,6 +206,7 @@ h3 {
   font-size: 1.5rem;
   color: white;
   overflow-y: hidden;
+  text-align: center;
 }
 .authorbttn {
   background-color: var(--bttncolor);
@@ -227,12 +229,22 @@ h3 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
+  .charactercard {
+    width: 30vw;
+  }
   .characters {
     grid-row: 1;
     grid-column: 1;
+    justify-content: center;
+    align-content: center;
   }
   .author {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1;
+    justify-self: center;
+    align-content: center;
+  }
+  .authorimg {
+    width: 150px;
   }
 }
