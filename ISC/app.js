@@ -10,6 +10,3 @@ const observer = new IntersectionObserver((entries) => {
 });
 const hiddenElements = document.querySelectorAll(".cardhidden");
 hiddenElements.forEach((el) => observer.observe(el));
-
-const partnerelement = document.querySelectorAll(".partner");
-partnerelement.forEach((el) => observer.observe(el));
