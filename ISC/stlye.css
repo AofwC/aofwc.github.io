@@ -1,13 +1,12 @@
-bdoy {
-  width: 100vw;
-}
-
 .herotitle {
   width: 100%;
   place-items: center;
   margin: 20px;
   margin-top: 100px;
   text-align: center;
+}
+.navbar {
+  background-color: #668abf;
 }
 .carousel-item img {
   max-width: 100%;
