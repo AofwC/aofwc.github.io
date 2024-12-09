@@ -1,0 +1,11 @@
+.footercontainer {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+  background: #ef995c;
+}
+.footercontainer div {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px;
+}
