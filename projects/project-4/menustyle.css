@@ -1,0 +1,129 @@
+.menuselecwrapper {
+  margin: 0 auto;
+  height: 20vh;
+  display: grid;
+  place-items: center;
+}
+.buttoncontainer {
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menubutton {
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  background-color: #ffae73;
+  background-size: cover;
+  border-radius: 18px;
+  transition: ease 0.5s;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.menubutton:hover {
+  background-color: #4a3424;
+  color: white;
+}
+.smallBiteContainer {
+  margin: 0 auto;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+}
+.smallimg {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.muffin {
+  position: relative;
+  display: grid;
+  grid-template-rows: 350px 50px;
+  background-color: #ffbe6f;
+  border-radius: 18px;
+  box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.muffin img {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.soup {
+  position: relative;
+  display: grid;
+  grid-template-rows: 350px 50px;
+  background-color: #ffbe6f;
+  border-radius: 18px;
+  box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.soup img {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.iteminfo {
+  padding: 10px;
+  display: flex;
+  grid-row: 2;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.teaname {
+  padding-top: 5px;
+  font-size: 1.5rem;
+  justify-self: center;
+  align-self: center;
+}
+.hide {
+  opacity: 0;
+}
+.smallmain {
+  margin: 0 auto;
+  display: grid;
+}
+.foodname {
+  font-size: 2rem;
+}
+.food {
+  margin-top: 50px;
+}
+.foodprice {
+  display: flex;
+  font-size: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.prices {
+  justify-self: flex-end;
+}
+hr {
+  border: none;
+  border-top: 2px dotted black;
+  width: 100%;
+  align-self: flex-end;
+}
+.foodeg {
+  font-size: 0.8rem;
+  margin-top: 5px; /* Adjust the margin as needed */
+  justify-self: baseline;
+  align-self: flex-start;
+}
+@media (max-width: 768px) {
+  .smallBiteContainer {
+    gap: 10px;
+  }
+  .smallimg {
+    display: grid;
+  }
+  .iteminfo {
+    font-size: 1.2rem;
+  }
+  .foodname {
+    font-size: 1.5rem;
+  }
+  .foodprice {
+    font-size: 1rem;
+  }
+  .foodeg {
+    font-size: 0.7rem;
+  }
+}

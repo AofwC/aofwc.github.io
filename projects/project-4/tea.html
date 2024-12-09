@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="menustyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="About.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="event.html">Events</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="index.html"><img src="icon/main.png" alt="" /></a>
+        </li>
+        <li class="hideOnMobile"><a href="About.html">Our Story</a></li>
+        <li class="hideOnMobile"><a href="menu.html">Menu</a></li>
+        <li class="hideOnMobile"><a href="event.html">Events</a></li>
+        <li class="menu-bttn" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menuselecwrapper">
+      <div class="buttoncontainer">
+        <a class="menubutton" href="menu.html">Small Bite</a>
+        <a class="menubutton" href="Coffee.html">Coffee</a>
+        <a class="menubutton" href="tea.html">Tea</a>
+      </div>
+    </div>
+    <div class="smallBiteContainer">
+      <div class="smallspecial">
+        <div class="smallimg">
+          <div class="muffin">
+            <img src="img/Macha.gif" alt="Macha tea" />
+            <div class="teainfo">
+              <div class="teaname">Matcha Tea</div>
+            </div>
+          </div>
+          <div class="soup">
+            <img src="img/Jasmine.gif" alt="Jasmine Tea" />
+            <div class="teainfo">
+              <div class="teaname">Soup of the Day</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="smallmain">
+        <div class="food">
+          <div class="foodname">Teas</div>
+          <hr />
+          <div class="foodprice">
+            <div>Herbal Tea</div>
+
+            <div class="prices">$3.00</div>
+          </div>
+          <div class="foodprice">
+            <div>Iced Tea</div>
+
+            <div class="prices">$3.50</div>
+          </div>
+        </div>
+        <div class="food">
+          <div class="foodname">Tea Varieties</div>
+          <hr />
+          <div class="foodprice">
+            <div>Earl Grey</div>
+          </div>
+          <div class="foodprice">
+            <div>English Breakfast</div>
+          </div>
+          <div class="foodprice">
+            <div>Green Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Jasmine Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Chamomile Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Peppermint Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Rooibos Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Matcha Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Oolong Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>White Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Herbal Blend</div>
+            <div class="foodeg">(e.g., ham and cheese, turkey and avocado)</div>
+            <div class="prices hide">$6.00</div>
+          </div>
+          <div class="foodprice">
+            <div>Chai Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Darjeeling Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Assam Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Sencha Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Genmaicha Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Pu-erh Tea</div>
+          </div>
+          <div class="foodprice">
+            <div>Lemon Verbena Tea</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footercontainer">
+        <div class="Day">Open Daily: 8AM - 8PM</div>
+        <div class="Address">
+          123 Paxton St. Harrisburg, Pennsylvania, 17890
+        </div>
+        <div class="Phone">717-123-4567</div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

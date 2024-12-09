@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="eventstyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="About.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="event.html">Events</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="index.html"><img src="icon/main.png" alt="" /></a>
+        </li>
+        <li class="hideOnMobile"><a href="About.html">Our Story</a></li>
+        <li class="hideOnMobile"><a href="menu.html">Menu</a></li>
+        <li class="hideOnMobile"><a href="#">Events</a></li>
+        <li class="menu-bttn" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="eventwrapper">
+      <div class="monday img">
+        <div class="dateimg mondayimg">
+          <img src="img/events/musicnight.gif" alt="Music Night" />
+        </div>
+      </div>
+      <div class="datetxt mondaytxt">
+        <h2>Monday</h2>
+        <div class="dateinfo">
+          <h3>Morning Yoga Class</h3>
+          <br />
+          <p>
+            Start your week with a relaxing yoga session. (8:00 AM - 9:00 AM)
+          </p>
+        </div>
+        <div class="dateinfo">
+          <h3>Live Acoustic Music</h3>
+          <br />
+          <p>
+            Enjoy soulful acoustic performances by local artists. (7:00 PM -
+            9:00 PM)
+          </p>
+        </div>
+      </div>
+      <div class="monday img">
+        <div class="dateimg tuesdayimg">
+          <img src="img/events/micnight.gif" alt="Open Mic Night" />
+        </div>
+      </div>
+      <div class="datetxt Tuesdaytxt">
+        <h2>Tuesday</h2>
+        <div class="dateinfo">
+          <h3>Coffee Tasting Workshop</h3>
+          <br />
+          <p>
+            Learn about different coffee brewing methods and taste various
+            specialty coffees. (6:00 PM - 7:30 PM)
+          </p>
+        </div>
+        <div class="dateinfo">
+          <h3>Open Mic Night</h3>
+          <br />
+          <p>
+            Showcase your talent or enjoy the performances of local musicians,
+            poets, and comedians. (8:00 PM - 10:00 PM)
+          </p>
+        </div>
+      </div>
+      <div class="monday img">
+        <div class="dateimg wedimg">
+          <img src="img/events/art.gif" alt="Art Show" />
+        </div>
+      </div>
+      <div class="datetxt Wednesdaytxt">
+        <h2>Wednesday</h2>
+        <div class="dateinfo">
+          <h3>Art Exhibition</h3>
+          <br />
+          <p>
+            Explore the works of local artists displayed throughout the coffee
+            shop. (All day)
+          </p>
+        </div>
+        <div class="dateinfo">
+          <h3>Trivia Night</h3>
+          <br />
+          <p>
+            Test your knowledge and compete with friends in a fun-filled trivia
+            competition. (7:00 PM - 9:00 PM)
+          </p>
+        </div>
+      </div>
+      <div class="monday img">
+        <div class="dateimg">
+          <img src="img/events/cooking.gif" alt="Cooking Class" />
+        </div>
+      </div>
+      <div class="datetxt">
+        <h2>Thrusday</h2>
+        <div class="dateinfo">
+          <h3>Cooking Class</h3>
+          <br />
+          <p>
+            Join our skilled chef and learn to prepare delicious desserts.
+            Limited spots available, reservations required. (5:00 PM - 7:00 PM)
+          </p>
+        </div>
+        <div class="dateinfo">
+          <h3>Board Game Night</h3>
+          <br />
+          <p>
+            Gather with friends and enjoy a variety of board games while sipping
+            your favorite drinks. (6:00 PM - 9:00 PM)
+          </p>
+        </div>
+      </div>
+      <div class="monday img">
+        <div class="dateimg">
+          <img src="img/events/jazz.gif" alt="Jazz night" />
+        </div>
+      </div>
+      <div class="datetxt">
+        <h2>Friday</h2>
+        <div class="dateinfo">
+          <h3>Live Jazz Band</h3>
+          <br />
+          <p>
+            Relax and unwind with the smooth tunes of a live jazz band. (7:30 PM
+            - 9:30 PM)
+          </p>
+        </div>
+      </div>
+      <div class="monday img">
+        <div class="dateimg">
+          <img src="img/events/Saturday.gif" alt="Poetry Slam" />
+        </div>
+      </div>
+      <div class="datetxt">
+        <h2>Saturday</h2>
+        <div class="dateinfo">
+          <h3>Family Day</h3>
+          <br />
+          <p>
+            Bring your kids for a special day of face painting, storytelling,
+            and fun activities. (10:00 AM - 12:00 PM)
+          </p>
+        </div>
+        <div class="dateinfo">
+          <h3>Poetry Slam</h3>
+          <br />
+          <p>
+            Express your creativity or listen to passionate poets share their
+            work during our poetry slam event. (7:00 PM - 9:00 PM)
+          </p>
+        </div>
+      </div>
+      <div class="monday img">
+        <div class="dateimg">
+          <img src="img/events/sunday.gif" alt="Book Club Meeting" />
+        </div>
+      </div>
+      <div class="datetxt">
+        <h2>Sunday</h2>
+        <div class="dateinfo">
+          <h3>Book Club Meeting</h3>
+          <br />
+          <p>
+            Discuss the latest book selection with fellow book enthusiasts over
+            a cup of coffee. (3:00 PM - 4:30 PM)
+          </p>
+        </div>
+        <div class="dateinfo">
+          <h3>Sunday Brunch</h3>
+          <br />
+          <p>
+            Indulge in a delicious brunch menu accompanied by live acoustic
+            music. (10:00 AM - 2:00 PM)
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footercontainer">
+        <div class="Day">Open Daily: 8AM - 8PM</div>
+        <div class="Address">
+          123 Paxton St. Harrisburg, Pennsylvania, 17890
+        </div>
+        <div class="Phone">717-123-4567</div>
+      </div>
+    </footer>
+  </body>
+</html>

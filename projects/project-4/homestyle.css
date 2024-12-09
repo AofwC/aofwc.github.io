@@ -109,9 +109,16 @@
 }
 .menuitem1txt {
   grid-row: 2;
-
+  text-decoration: none;
   font-size: 3rem;
   text-align: center;
+}
+.menuitem1txt a {
+  text-decoration: none;
+  color: #313638;
+}
+.menuitem1txt a:hover {
+  color: white;
 }
 .menuitem2 {
   grid-column: 2;
