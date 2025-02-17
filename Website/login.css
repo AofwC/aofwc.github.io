@@ -1,0 +1,77 @@
+:root {
+  --base-body-color: #f5f5f5;
+  --base-color: #0f0f10;
+  --base-icon-color: #000000;
+  --basenav-color: #9f5b3c;
+  --base-signup-color: #3c649f;
+}
+.darkmode {
+  --base-body-color: #232222;
+  --base-color: #fafcff;
+  --base-icon-color: #ffffff;
+  --basenav-color: #1c0f0a;
+  --base-signup-color: #131e2f;
+}
+
+#login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: calc(100vw - 185.65px);
+  margin-left: 208px;
+  text-align: center;
+  overflow: hidden;
+}
+.PicHolder img {
+  width: 200px;
+  height: 200px;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.UserInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.PassInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.LoginBttn {
+  margin-top: 50px;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--basenav-color);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.Signup {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--base-signup-color);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  #login {
+    width: calc(100vw - 250px);
+    display: grid;
+    place-items: center;
+  }
+}
