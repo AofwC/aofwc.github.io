@@ -1,0 +1,62 @@
+:root {
+  --base-body-color: #f5f5f5;
+  --base-color: #0f0f10;
+  --base-icon-color: #000000;
+  --basenav-color: #9f5b3c;
+  --base-signup-color: #3c649f;
+  --base-upload-color: #646464;
+  --base-hash-color: #ff5223;
+  --base-like-color: #ff0000;
+  --base-comment-color: #00ff73;
+  --base-save-color: #0000ff;
+}
+.darkmode {
+  --base-body-color: #232222;
+  --base-color: #fafcff;
+  --base-icon-color: #ffffff;
+  --basenav-color: #1c0f0a;
+  --base-signup-color: #131e2f;
+  --base-hash-color: #3a180f;
+}
+
+.UploadingMain {
+  display: grid;
+  margin-left: 20%;
+  place-items: center;
+  height: 100vh;
+}
+.Uploading {
+  display: grid;
+  height: 1000px;
+  width: 500px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+}
+.UploadingMain .Uploading .Uploading__icon {
+  font-size: 50px;
+  color: #ff4500;
+}
+.des {
+  font-size: 20px;
+  color: var(--base-color);
+  width: 500px;
+}
+#des {
+  font-size: 20px;
+  color: #ff4500;
+  width: 500px;
+}
+.subBBT {
+  background-color: #ff4500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+}

@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Barg</title>
+    <title>Profile - Barg</title>
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="upload.css" />
+    <link rel="stylesheet" href="uploadstyle.css" />
     <link rel="icon" type="image/x-icon" href="icoN.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
@@ -21,7 +23,7 @@
       </div>
       <div class="itemlink">
         <div class="homelink">
-          <a href="home.html">
+          <a href="index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="57px"
@@ -34,7 +36,7 @@
               />
             </svg>
           </a>
-          <a href="home.html" class="LinkClick">Home</a>
+          <a href="index.html" class="LinkClick">Home</a>
         </div>
         <div class="upLoadLink">
           <a href="upload.html">
@@ -82,29 +84,35 @@
         />
       </svg>
     </button>
-    <div id="login">
-      <div>
-        <div class="PicHolder">
-          <img src="icoN.svg" alt="homeIcon" />
+    <div class="UserProfile">
+      <div class="UserPic">
+        <img src="profile.webp" alt="ProfileIcon" />
+      </div>
+      <div class="UserDetails">
+        <h1 class="username">Username</h1>
+        <p class="userAbout">This is a test subject</p>
+      </div>
+    </div>
+    <div class="mainContent">
+      <div class="UserPosts">
+        <div class="Post1">
+          <img src="animal2.webp" alt="ProfileIcon" />
         </div>
-        <form action="login.php" class="formInput" method="post">
-          <input
-            class="UserInput"
-            type="text"
-            name="username"
-            placeholder="Username"
-            required
-          />
-          <input
-            class="PassInput"
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <button class="LoginBttn" type="submit">Login</button>
-          <button class="Signup" type="submit">Signup</button>
-        </form>
+        <div class="Post2">
+          <img src="profile.webp" alt="ProfileIcon" />
+        </div>
+        <div class="Post3">
+          <img src="fox.jpg" alt="ProfileIcon" />
+        </div>
+        <div class="Post4">
+          <img src="cute1.jpg" alt="ProfileIcon" />
+        </div>
+        <div class="Post5">
+          <img src="rabbit.jpg" alt="ProfileIcon" />
+        </div>
+        <div class="Post6">
+          <img src="foxy.jpg" alt="ProfileIcon" />
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

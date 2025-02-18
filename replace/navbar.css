@@ -1,13 +1,8 @@
-* {
-  font-family: "Hanken Grotesk", sans-serif;
-}
-
 body {
   margin: 0;
   padding: 0;
   background-color: var(--base-body-color);
-
-  height: 100vh;
+  overflow: hidden;
 }
 :root {
   --base-body-color: #f5f5f5;
@@ -31,7 +26,6 @@ body {
   position: fixed;
   align-content: center;
   box-shadow: 3px 0px 5px 0px rgba(56, 56, 56, 1);
-  max-width: 200px;
 }
 #theme-switch {
   position: fixed;
@@ -63,7 +57,6 @@ body {
 
 .icon {
   height: 100px;
-  width: 100%;
 }
 .icon a {
   width: 100%;
