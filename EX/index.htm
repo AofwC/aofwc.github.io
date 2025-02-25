@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+      }
+      input {
+        margin: 5px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      label {
+        margin: 5px;
+        font-size: 1.5rem;
+      }
+      button {
+        margin: 5px;
+        border: none;
+        padding: 10px;
+        background-color: #4caf50;
+        font-size: 1rem;
+      }
+      button:hover {
+        background-color: #45a049;
+        scale: 1.1;
+        transition: ease 0.5s;
+      }
+      #getResult {
+        background-color: brown;
+        color: white;
+      }
+      #getMinus {
+        background-color: blue;
+        color: white;
+      }
+      #getMulti {
+        background-color: yellow;
+        color: black;
+      }
+      #theRe {
+        font-size: 2rem;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="num1" id>Input the First Number</label>
+      <input type="number" name="num1" id="num1" />
+      <label for="num2">Input the Second Number</label>
+      <input type="number" name="num2" id="num2" />
+    </div>
+    <h2 id="theRe"></h2>
+    <button onclick="result()" id="getResult">Add</button>
+    <button onclick="minus()" id="getMinus">Minus</button>
+    <button onclick="multiple()" id="getMulti">Multiply</button>
+    <button onclick="divine()" id="getDivine">Divine</button>
+    <h2 id="theRe"></h2>
+    <script>
+      document
+        .getElementById("getResult")
+        .addEventListener("click", function result() {
+          let num1 = document.getElementById("num1").value;
+          let num2 = document.getElementById("num2").value;
+          let result = parseInt(num1) + parseInt(num2);
+          document.getElementById("theRe").innerHTML = result;
+        });
+      document
+        .getElementById("getMulti")
+        .addEventListener("click", function multiple() {
+          let num1 = document.getElementById("num1").value;
+          let num2 = document.getElementById("num2").value;
+          let result = parseInt(num1) * parseInt(num2);
+          document.getElementById("theRe").innerHTML = result;
+        });
+      document
+        .getElementById("getMinus")
+        .addEventListener("click", function minus() {
+          let num1 = document.getElementById("num1").value;
+          let num2 = document.getElementById("num2").value;
+          let result = parseInt(num1) - parseInt(num2);
+          document.getElementById("theRe").innerHTML = result;
+        });
+      document
+        .getElementById("getDivine")
+        .addEventListener("click", function divine() {
+          let num1 = document.getElementById("num1").value;
+          let num2 = document.getElementById("num2").value;
+          let result = parseInt(num1) / parseInt(num2);
+          document.getElementById("theRe").innerHTML = result;
+        });
+    </script>
+  </body>
+</html>
