@@ -62,6 +62,7 @@
     <button onclick="multiple()" id="getMulti">Multiply</button>
     <button onclick="divine()" id="getDivine">Divine</button>
     <h2 id="theRe"></h2>
+
     <script>
       document
         .getElementById("getResult")
@@ -70,6 +71,7 @@
           let num2 = document.getElementById("num2").value;
           let result = parseInt(num1) + parseInt(num2);
           document.getElementById("theRe").innerHTML = result;
+          document.body.style.backgroundColor = "brown";
         });
       document
         .getElementById("getMulti")
@@ -78,6 +80,7 @@
           let num2 = document.getElementById("num2").value;
           let result = parseInt(num1) * parseInt(num2);
           document.getElementById("theRe").innerHTML = result;
+          document.body.style.backgroundColor = "blue";
         });
       document
         .getElementById("getMinus")
@@ -86,6 +89,7 @@
           let num2 = document.getElementById("num2").value;
           let result = parseInt(num1) - parseInt(num2);
           document.getElementById("theRe").innerHTML = result;
+          document.body.style.backgroundColor = "yellow";
         });
       document
         .getElementById("getDivine")
@@ -94,6 +98,7 @@
           let num2 = document.getElementById("num2").value;
           let result = parseInt(num1) / parseInt(num2);
           document.getElementById("theRe").innerHTML = result;
+          document.body.style.backgroundColor = "green";
         });
     </script>
   </body>
