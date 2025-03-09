@@ -3,6 +3,10 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import heroimg from '../components/img/Heroimg1.jpg'
+import heroimg2 from '../components/img/Heroimg2.jpg'
+import founderimg from '../components/img/founderimg.jpg'
+import homestyle from '../styles/homestyle.css'
 ---
 
 <!doctype html>
@@ -13,38 +17,74 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1> Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div class="heroimg">
+				<img src={heroimg.src}>
+				<img src={heroimg2.src}>
+			</div>
+			<div class="heroMessage">
+				<h1 class="heroMainMessage">Comedy is simply a funny way of being serious.</h1>
+				
+			</div>
+			<div class="aboutUscontainer">
+				<img class="aboutimg" src={founderimg.src} alt="founder image">
+				<h1 class="aboutHeader">About Us</h1>
+				<p class="aboutParagraph">Comedian is a comedy club that has been in business for over 20 years. We have hosted some of the best comedians in the world and have a reputation for providing a great night out. Our club is located in the heart of the city and is easily accessible by public transport. We have a fully stocked bar and a great selection of food to choose from. So come on down and have a laugh with us!</p>
+			</div>
+			<div class="cardContainer">
+				<div class="Card1Con"></div>
+				<div class="Card2Con"></div>
+				<div class="Card3Con"></div>
+			</div>
+			
 		</main>
 		<Footer />
 	</body>
+	<style>
+		.heroimg {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			place-items: center;
+			position: relative;
+		}
+		.heroimg img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.heroparagraph {
+			font-size: 1.5rem;
+			margin-top: -2rem;
+			color: #3B3B3B;
+		}
+		.heroMainMessage {
+			text-align: center;
+			font-size: 4rem;
+			color: #232323;
+			min
+		}
+		.aboutUscontainer {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 100px 500px;
+			margin-top: 2rem;
+		}
+		.aboutimg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			grid-row: 1 / 3	;
+		}
+		.aboutHeader {
+			font-size: 2rem;
+			color: #232323;
+		}
+		.aboutParagraph {
+			font-size: 1.5rem;
+			color: #3B3B3B;
+		}
+
+
+		
+		
+	</style>
 </html>
