@@ -1,12 +1,337 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import founderimg from '../components/img/founderimg.jpg'
+import gal1 from '../components/img/gal1.jpg'
+import gal2 from '../components/img/gal2.jpg'
+import gal3 from '../components/img/gal3.jpg'
+import gal4 from '../components/img/gal4.jpg'
+import heroimg from '../components/img/Heroimg1.jpg'
+import heroimg2 from '../components/img/Heroimg2.jpg'
+import gal5 from '../components/img/gal5.jpg'
+import gal6 from '../components/img/gal6.jpg'
+import gal7 from '../components/img/gal7.jpg'
+
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>Hell My name is Chatthrinn Wanphusit, but I goes by Aof. Hi hi</p>
-</Layout>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="landing-container">
+				<div class="message">
+				  <div class="word word-1">WE</div>
+				  <div class="word word-2">BRING</div>
+				  <div class="word word-3">LAUGH</div>
+				</div>
+				<div class="scanlines"></div>
+			</div>
+			<div class="profile-container">
+				<div class="image-section">
+					<div class="placeholder">
+						<img src={founderimg.src} alt="">
+					</div>
+				</div>
+				<div class="text-section">
+					<div class="date">Mar. 10, 2025</div>
+					<h1 class="name">Ryan Carter</h1>
+					<div class="bio">
+						<p>
+							As the founder of this platform, Ryan Carter is passionate about supporting local stand-up comedians and giving them the stage they deserve. He believes comedy has the power to connect people, spark conversation, and uplift communities. His goal is to create a space where emerging talent can thrive, fans can discover new voices, and live comedy can continue to grow.
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="heromessage">
+				Fill Memories with Laughter
+			</div>
+			<div class="gallery-container">
+				<div class="gallery-grid">
+					
+					<div class="gallery-item">
+						<img src={gal1.src} alt="Performance 1" class="gallery-image">
+					</div>
+					<div class="gallery-item">
+						<img src={gal2.src} alt="Performance 2" class="gallery-image">
+					</div>
+					<div class="gallery-item">
+						<img src={gal3.src} alt="Performance 3" class="gallery-image">
+					</div>
+					
+					
+					<div class="gallery-item">
+						<img src={gal4.src} alt="Performance 4" class="gallery-image">
+					</div>
+					<div class="gallery-item">
+						<img src={heroimg.src} alt="Performance 5" class="gallery-image">
+					</div>
+					<div class="gallery-item">
+						<img src={heroimg2.src} alt="Performance 6" class="gallery-image">
+					</div>
+					
+					<!-- Row 3 -->
+					<div class="gallery-item">
+						<img src={gal5.src} alt="Performance 7" class="gallery-image">
+					</div>
+					<div class="gallery-item">
+						<img src={gal6.src} alt="Performance 8" class="gallery-image">
+					</div>
+					<div class="gallery-item">
+						<img src={gal7.src}alt="Performance 9" class="gallery-image">
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		
+		<style>
+		main {
+			width: calc(100% - 2em);
+			max-width: 100%;
+			margin: 0;
+			
+		}
+		.profile-container {
+
+            display: flex;
+            max-width: 100%;
+            height: 300px;
+			margin: 200px 0;
+        }
+        .image-section {
+            flex: 1;
+            
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-section {
+            flex: 1;
+            padding: 30px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+			position: relative;
+        }
+        .date {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .name {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 10px 0 20px 0;
+        }
+        .bio {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: #333;
+        }
+        .placeholder {
+			width: 100%;
+			max-width: 1440px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+		.landing-container {
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-color: #111;
+			position: relative;
+			padding-left: 10vw; 
+		  }
+	  
+		  .message {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start; 
+			height: 100%;
+		  }
+	  
+		  .word {
+			font-size: clamp(3rem, 15vw, 10rem);
+			font-weight: 900;
+			line-height: 1.1;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			position: relative;
+			text-align: left; 
+		  }
+	  
+		  
+		  .word-1 {
+			animation: flicker1 4s linear infinite;
+		  }
+	  
+		  .word-2 {
+			animation: flicker2 3s linear infinite;
+			animation-delay: 0.3s;
+		  }
+	  
+		  .word-3 {
+			animation: flicker3 5s linear infinite;
+			animation-delay: 0.7s;
+		  }
+		  .gallery-container {
+			position: relative;
+			height: 100vh;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            justify-content: center;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+	  
+		  /* Flicker animations with green colors */
+		  @keyframes flicker1 {
+			0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+			  opacity: 1;
+			  text-shadow: 
+				0 0 4px #fff,
+				0 0 11px #fff,
+				0 0 19px #fff,
+				0 0 40px #0f9,
+				0 0 80px #0f9,
+				0 0 90px #0f9,
+				0 0 100px #0f9,
+				0 0 150px #0f9;
+			}
+			20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+			  opacity: 0.4;
+			  text-shadow: none;
+			}
+		  }
+	  
+		  @keyframes flicker2 {
+			0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+			  opacity: 1;
+			  text-shadow: 
+				0 0 4px #fff,
+				0 0 11px #fff,
+				0 0 19px #fff,
+				0 0 40px #0f0,
+				0 0 80px #0f0,
+				0 0 90px #0f0,
+				0 0 100px #0f0,
+				0 0 150px #0f0;
+			}
+			20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+			  opacity: 0.4;
+			  text-shadow: none;
+			}
+		  }
+	  
+		  @keyframes flicker3 {
+			0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+			  opacity: 1;
+			  text-shadow: 
+				0 0 4px #fff,
+				0 0 11px #fff,
+				0 0 19px #fff,
+				0 0 40px #0c6,
+				0 0 80px #0c6,
+				0 0 90px #0c6,
+				0 0 100px #0c6,
+				0 0 150px #0c6;
+			}
+			20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+			  opacity: 0.4;
+			  text-shadow: none;
+			}
+		  }
+		  .heromessage{
+			text-align: center;
+			font-size: 4rem;
+			margin-top: 250px;
+		  }
+		  
+		  .scanlines {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			pointer-events: none;
+			z-index: 10;
+			background: linear-gradient(
+			  to bottom,
+			  rgba(255, 255, 255, 0) 50%,
+			  rgba(0, 0, 0, 0.3) 50%
+			);
+			background-size: 100% 4px;
+			opacity: 0.1;
+		  }
+	  
+		  /* Responsiveness */
+		  @media (max-width: 768px) {
+			.word {
+			  
+			}
+			.landing-container {
+			  padding-left: 5vw; 
+			}
+			.profile-container {
+			  flex-direction: column;
+			  margin: 50px 0;
+		  }
+		  
+		</style>
