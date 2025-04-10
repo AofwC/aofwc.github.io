@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+.imgcontainer {
+  display: grid;
+  width: 1500px;
+  gap: 10px;
+  grid-template-columns: 500 500px 500px;
+  grid-template-rows: 500px 500px 500px;
+  place-items: center;
+}
+.img1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.img2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.img3 {
+  grid-column: 3;
+  grid-row: 3;
+}
