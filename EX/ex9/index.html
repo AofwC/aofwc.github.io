@@ -9,6 +9,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        width: 100%;
       }
 
       .container {
@@ -24,6 +25,15 @@
 
       img:hover {
         transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
+      img:has(:hover) {
+        filter: grayscale(0%);
+        transition: all 0.3s ease;
+        scale: 0.8;
+      }
+      img:not(:hover) {
+        filter: grayscale(100%);
         transition: all 0.3s ease;
       }
 
