@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open House College - Project Details</title>
+    <link rel="icon" href="Favicon.svg" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #121212;
+        color: white;
+      }
+
+      header {
+        background-color: #75b2e8;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #121212;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .logo:hover {
+        color: white;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 20px;
+      }
+
+      nav ul li a {
+        color: #121212;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: white;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #121212;
+        transition: all 0.3s ease;
+      }
+
+      /* Project Header */
+      .project-header {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .project-title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+      }
+
+      .featured-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .featured-image img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Project Description */
+      .project-description {
+        text-align: center;
+        padding: 40px 20px;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        place-items: center;
+      }
+
+      .description-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        max-width: 45ch;
+      }
+
+      /* Project Gallery */
+      .project-gallery {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .gallery-item {
+        overflow: hidden;
+        position: relative;
+        background-color: #222;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.03);
+      }
+
+      /* Additional Project Section */
+      .additional-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .billboard-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+
+        nav ul {
+          position: fixed;
+          top: 60px;
+          left: 0;
+          flex-direction: column;
+          background-color: #75b2e8;
+          width: 100%;
+          text-align: center;
+          transform: translateY(-100%);
+          transition: transform 0.3s ease;
+          z-index: 100;
+          padding: 20px 0;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        nav ul.active {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        nav ul li {
+          margin: 15px 0;
+        }
+
+        .project-title {
+          font-size: 2.2rem;
+        }
+
+        .project-gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Aof</a>
+      <nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html#my-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="project-header">
+      <h1 class="project-title">Open House College</h1>
+      <div class="featured-image">
+        <img src="imgs/OpenHouse/Folder.jpg" alt="Critique Magazine Cover" />
+      </div>
+    </section>
+
+    <section class="project-description">
+      <p class="description-title">
+        Creating a folder/poster for a conceptual university that’s base from
+        New York University. The main concept of this project is “creating
+        culture through connection”. Where the design is aim to promote Open
+        house event
+      </p>
+    </section>
+
+    <div class="project-gallery">
+      <div class="gallery-item">
+        <img
+          src="imgs/OpenHouse/Poster.png"
+          alt="Critique Magazine Inside Pages"
+        />
+      </div>
+      <div class="gallery-item">
+        <img src="imgs/OpenHouse/Social.jpg" alt="Critique Magazine Layout" />
+      </div>
+      <div class="gallery-item">
+        <img src="imgs/OpenHouse/1.jpg" alt="Critique Magazine Website" />
+      </div>
+      <div class="gallery-item">
+        <img src="imgs/OpenHouse/3.jpg" alt="Empty Gallery Space" />
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to enhance the user experience
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hamburger menu functionality
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+
+          // Animate hamburger to X
+          const spans = this.querySelectorAll("span");
+          spans.forEach((span) => span.classList.toggle("active"));
+
+          if (navMenu.classList.contains("active")) {
+            spans[0].style.transform = "rotate(45deg) translate(5px, 6px)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "rotate(-45deg) translate(5px, -6px)";
+          } else {
+            spans[0].style.transform = "none";
+            spans[1].style.opacity = "1";
+            spans[2].style.transform = "none";
+          }
+        });
+
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+
+            // Reset hamburger
+            const spans = hamburger.querySelectorAll("span");
+            spans.forEach((span) => {
+              span.classList.remove("active");
+              span.style.transform = "none";
+              span.style.opacity = "1";
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatthrinn Wanphusit - Portfolio</title>
+    <link rel="icon" href="Favicon.svg" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      header {
+        background-color: #75b2e8;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #121212;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .logo:hover {
+        color: white;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 20px;
+      }
+
+      nav ul li a {
+        color: #121212;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: white;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #121212;
+        transition: all 0.3s ease;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px;
+        background-color: #fff;
+        min-height: 400px;
+      }
+
+      .profile-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        max-width: 1000px;
+        width: 100%;
+      }
+
+      .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+        flex-shrink: 0;
+      }
+
+      .profile-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .intro-text {
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .name {
+        color: #4293e0;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .profession {
+        color: #4293e0;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 5px;
+      }
+
+      .about-link {
+        margin-top: 20px;
+        align-self: flex-end;
+        color: #4293e0;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .about-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Projects Section */
+      .projects-section {
+        background-color: #121212;
+        padding: 40px 0;
+        color: white;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+      }
+
+      .projects-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .project-card {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 80%; /* Maintain aspect ratio */
+        background-color: #2a2a2a;
+        margin-bottom: 20px;
+      }
+
+      .project-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s;
+      }
+
+      .project-image-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .project-card:hover .project-image {
+        opacity: 0;
+      }
+
+      .project-card:hover .project-image-hover {
+        opacity: 1;
+      }
+
+      .project-title {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: white;
+        font-size: 0.9rem;
+        text-align: right;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+
+      .more-projects {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .more-projects a {
+        color: #4293e0;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .more-projects a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .profile-container {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+        }
+
+        .about-link {
+          align-self: center;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 2rem;
+          padding: 20px 0;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        nav ul {
+          position: fixed;
+          top: 60px;
+          left: 0;
+          flex-direction: column;
+          background-color: #75b2e8;
+          width: 100%;
+          text-align: center;
+          transform: translateY(-100%);
+          transition: transform 0.3s ease;
+          z-index: 100;
+          padding: 20px 0;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        nav ul.active {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        nav ul li {
+          margin: 15px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Aof</a>
+      <nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html#my-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="profile-container">
+        <div class="profile-image">
+          <img src="Favicon.svg" alt="" />
+        </div>
+        <div class="profile-info">
+          <p class="intro-text">
+            my name is <span class="name">Chatthrinn Wanphusit</span>
+          </p>
+          <p class="intro-text">
+            and I'm a <span class="profession">Graphic Designer</span>
+          </p>
+          <a href="about.html" class="about-link">About me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+        <a href="port1.html" class="project-card">
+          <img
+            src="imgs/Magazine1.jpg"
+            alt="Critique Magazine"
+            class="project-image"
+          />
+          <img
+            src="imgs/Mag2.jpg"
+            alt="Critique Magazine Alternative"
+            class="project-image-hover"
+          />
+          <div class="project-title">Critique Magazine</div>
+        </a>
+
+        <a href="port2.html" class="project-card">
+          <img
+            src="imgs/Voice/BillBoard.jpg"
+            alt="Voice Campaign"
+            class="project-image"
+          />
+          <img
+            src="imgs/Voice/Social.jpg"
+            alt="Voice Campaign Alternative"
+            class="project-image-hover"
+          />
+          <div class="project-title">Voice Campaign</div>
+        </a>
+
+        <a href="port3.html" class="project-card">
+          <img
+            src="imgs/OpenHouse/Folder.jpg"
+            alt="College Open House"
+            class="project-image"
+          />
+          <img
+            src="imgs/OpenHouse/Social.jpg"
+            alt="College Open House Alternative"
+            class="project-image-hover"
+          />
+          <div class="project-title">College Open House</div>
+        </a>
+
+        <a href="port4.html" class="project-card">
+          <img
+            src="imgs/KeyStone/Poster Mockup.jpg"
+            alt="Keystone Campaign"
+            class="project-image"
+          />
+          <img
+            src="imgs/KeyStone/Mens Shirt Mockup.jpg"
+            alt="Keystone Campaign Alternative"
+            class="project-image-hover"
+          />
+          <div class="project-title">Keystone Campaign</div>
+        </a>
+
+        <a href="port5.html" class="project-card">
+          <img
+            src="imgs/SmallB/Cover_Spread.jpg"
+            alt="Small Business"
+            class="project-image"
+          />
+          <img
+            src="imgs/SmallB/Book.jpg"
+            alt="Small Business Alternative"
+            class="project-image-hover"
+          />
+          <div class="project-title">Small Business</div>
+        </a>
+
+        <a href="port6.html" class="project-card">
+          <img
+            src="imgs/TypeDesigner/TypeDesigner1.jpg"
+            alt="Type Designer Brochure"
+            class="project-image"
+          />
+          <img
+            src="imgs/TypeDesigner/Designer2.jpg"
+            alt="Type Designer Brochure Alternative"
+            class="project-image-hover"
+          />
+          <div class="project-title">Type Designer Brochure</div>
+        </a>
+      </div>
+
+      <div class="more-projects">
+        <a href="projects.html">More of my Projects</a>
+      </div>
+    </section>
+
+    <script>
+      // JavaScript to enhance the user experience
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create a more dynamic hover effect
+        const projectCards = document.querySelectorAll(".project-card");
+
+        projectCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "scale(1.02)";
+            this.style.transition = "transform 0.3s";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "scale(1)";
+          });
+        });
+
+        // Hamburger menu functionality
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+
+          // Animate hamburger to X
+          const spans = this.querySelectorAll("span");
+          spans.forEach((span) => span.classList.toggle("active"));
+
+          if (navMenu.classList.contains("active")) {
+            spans[0].style.transform = "rotate(45deg) translate(5px, 6px)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "rotate(-45deg) translate(5px, -6px)";
+          } else {
+            spans[0].style.transform = "none";
+            spans[1].style.opacity = "1";
+            spans[2].style.transform = "none";
+          }
+        });
+
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+
+            // Reset hamburger
+            const spans = hamburger.querySelectorAll("span");
+            spans.forEach((span) => {
+              span.classList.remove("active");
+              span.style.transform = "none";
+              span.style.opacity = "1";
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
