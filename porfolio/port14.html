@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Website - Project Details</title>
+    <link rel="icon" href="Favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Aof</a>
+      <nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html#my-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="project-header">
+      <h1 class="project-title">Social Media Website</h1>
+      <div class="featured-image">
+        <img src="imgs/Site3/PC1.jpg" alt="Critique Magazine Cover" />
+      </div>
+    </section>
+
+    <section class="project-description">
+      <div class="project-details">
+        <div class="details-column">
+          <p><strong>Client:</strong> Harrisburg Area Community College</p>
+          <p>
+            <strong>Software:</strong>
+            <span class="photoshop">Adobe Photoshop</span> <br />
+            <span class="html">HTML</span>
+            <span class="css">CSS</span>
+            <span class="js">JavaScript</span>
+          </p>
+        </div>
+        <div class="details-column">
+          <p>
+            <strong>Overview:</strong> Creating a Social Media Website that need
+            to have dark and light mode toggle and login form. The website also
+            need to have a responsive design that can be used on mobile and
+            desktop. The website is designed to be user-friendly and visually
+            appealing, with a focus on functionality and ease of use.
+            <a
+              href="https://aofwc.github.io/Website/index.html"
+              target="_blank"
+              class="link"
+              >Visit</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-gallery">
+      <div class="gallery-item">
+        <img src="imgs/Site3/MB1.jpg" alt="Critique Magazine Inside Pages" />
+      </div>
+      <div class="gallery-item">
+        <img src="imgs/Site3/PC2.jpg"Critique Magazine Layout" />
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to enhance the user experience
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hamburger menu functionality
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+
+          // Animate hamburger to X
+          const spans = this.querySelectorAll("span");
+          spans.forEach((span) => span.classList.toggle("active"));
+
+          if (navMenu.classList.contains("active")) {
+            spans[0].style.transform = "rotate(45deg) translate(5px, 6px)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "rotate(-45deg) translate(5px, -6px)";
+          } else {
+            spans[0].style.transform = "none";
+            spans[1].style.opacity = "1";
+            spans[2].style.transform = "none";
+          }
+        });
+
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+
+            // Reset hamburger
+            const spans = hamburger.querySelectorAll("span");
+            spans.forEach((span) => {
+              span.classList.remove("active");
+              span.style.transform = "none";
+              span.style.opacity = "1";
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

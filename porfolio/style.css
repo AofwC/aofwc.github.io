@@ -133,7 +133,40 @@ nav ul li a:hover {
 .inDesign {
   color: #ff38eb;
 }
+.html {
+  color: #ff8921;
+}
+.css {
+  color: #663399;
+}
+.js {
+  color: #fff600;
+}
+.link {
+  color: #46b2ff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
 
+.link:hover {
+  text-decoration: none; /* Remove the standard underline */
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #46b2ff; /* Same color as the text */
+  transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}
 /* Project Gallery */
 .project-gallery {
   max-width: 1200px;
