@@ -102,17 +102,35 @@
 
       /* Project Description */
       .project-description {
-        text-align: center;
         padding: 40px 20px;
         border-top: 1px solid #333;
         border-bottom: 1px solid #333;
-        place-items: center;
       }
 
-      .description-title {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-        max-width: 45ch;
+      .project-details {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .details-column {
+        flex: 1;
+        padding: 0 20px;
+        text-align: left;
+      }
+
+      .details-column:first-child {
+        flex: 0 0 300px;
+        border-right: 1px solid #444;
+      }
+
+      .details-column p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .software-name {
+        color: #e67e22;
       }
 
       /* Project Gallery */
@@ -193,6 +211,20 @@
         .project-gallery {
           grid-template-columns: 1fr;
         }
+
+        .project-details {
+          flex-direction: column;
+        }
+
+        .details-column {
+          padding: 20px;
+        }
+
+        .details-column:first-child {
+          border-right: none;
+          border-bottom: 1px solid #444;
+          text-align: left;
+        }
       }
     </style>
   </head>
@@ -221,11 +253,23 @@
     </section>
 
     <section class="project-description">
-      <p class="description-title">
-        Design a magazine cover and spread for the article on “Diversity in the
-        Workplace”. The focus of this project is to design an interesting
-        magazine cover and layout that will keep integrating through out
-      </p>
+      <div class="project-details">
+        <div class="details-column">
+          <p><strong>Client:</strong> Critique</p>
+          <p>
+            <strong>Software:</strong>
+            <span class="software-name">Adobe Illustrator</span>
+          </p>
+        </div>
+        <div class="details-column">
+          <p>
+            <strong>Overview:</strong> Design a magazine cover and spread for
+            the article on "Diversity in the Workplace". The focus of this
+            project is to design an interesting magazine cover and layout that
+            will keep integrating through out
+          </p>
+        </div>
+      </div>
     </section>
 
     <div class="project-gallery">

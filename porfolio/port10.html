@@ -5,196 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Remember - Project Details</title>
     <link rel="icon" href="Favicon.svg" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-
-      body {
-        background-color: #121212;
-        color: white;
-      }
-
-      header {
-        background-color: #75b2e8;
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: #121212;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-
-      .logo:hover {
-        color: white;
-      }
-
-      nav ul {
-        display: flex;
-        list-style: none;
-      }
-
-      nav ul li {
-        margin-left: 20px;
-      }
-
-      nav ul li a {
-        color: #121212;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
-
-      nav ul li a:hover {
-        color: white;
-      }
-
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-      }
-
-      .hamburger span {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background-color: #121212;
-        transition: all 0.3s ease;
-      }
-
-      /* Project Header */
-      .project-header {
-        text-align: center;
-        padding: 40px 20px;
-      }
-
-      .project-title {
-        font-size: 3rem;
-        margin-bottom: 40px;
-      }
-
-      .featured-image {
-        max-width: 400px;
-        margin: 0 auto;
-      }
-
-      .featured-image img {
-        width: 100%;
-        height: auto;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      /* Project Description */
-      .project-description {
-        text-align: center;
-        padding: 40px 20px;
-        border-top: 1px solid #333;
-        border-bottom: 1px solid #333;
-        place-items: center;
-      }
-
-      .description-title {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-        max-width: 45ch;
-      }
-
-      /* Project Gallery */
-      .project-gallery {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .gallery-item {
-        overflow: hidden;
-        position: relative;
-        background-color: #222;
-      }
-
-      .gallery-item img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease;
-      }
-
-      .gallery-item:hover img {
-        transform: scale(1.03);
-      }
-
-      /* Additional Project Section */
-      .additional-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      .billboard-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 40px;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .hamburger {
-          display: flex;
-        }
-
-        nav ul {
-          position: fixed;
-          top: 60px;
-          left: 0;
-          flex-direction: column;
-          background-color: #75b2e8;
-          width: 100%;
-          text-align: center;
-          transform: translateY(-100%);
-          transition: transform 0.3s ease;
-          z-index: 100;
-          padding: 20px 0;
-          opacity: 0;
-          pointer-events: none;
-        }
-
-        nav ul.active {
-          transform: translateY(0);
-          opacity: 1;
-          pointer-events: all;
-        }
-
-        nav ul li {
-          margin: 15px 0;
-        }
-
-        .project-title {
-          font-size: 2.2rem;
-        }
-
-        .project-gallery {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -224,12 +35,24 @@
     </section>
 
     <section class="project-description">
-      <p class="description-title">
-        The World Remember project challenges participants to design graphics
-        that recap major news events from 2025. Additional tasks include
-        creating a website to showcase the recaps and designing social media ads
-        to promote the project.
-      </p>
+      <div class="project-details">
+        <div class="details-column">
+          <p><strong>Client:</strong> World Remember</p>
+          <p>
+            <strong>Software:</strong>
+            <span class="illustrator">Adobe Illustrator</span> <br />
+            <span class="photoshop"> Adobe Photoshop</span>
+          </p>
+        </div>
+        <div class="details-column">
+          <p>
+            <strong>Overview:</strong> The World Remember project challenges
+            participants to design graphics that recap major news events from
+            2025. Additional tasks include creating a website to showcase the
+            recaps and designing social media ads to promote the project.
+          </p>
+        </div>
+      </div>
     </section>
 
     <div class="project-gallery">
